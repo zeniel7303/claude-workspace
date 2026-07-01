@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build:*)",
+      "Bash(dotnet restore:*)",
+      "Bash(grep -E \"\\\\.\\(cs|proto\\)$\")",
+      "Bash(git commit:*)",
+      "Skill(update-config)"
+    ]
+  }
+}

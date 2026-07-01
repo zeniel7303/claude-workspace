@@ -1,0 +1,6 @@
+- [Phase 4 web architecture](project_phase4_web_architecture.md) — gRPC+ASP.NET pattern; GET /players, POST /players/{id}/kick, GET /lobbies implemented (commit 738a626)
+- [vcpkg build setup quirks](project_vcpkg_build_setup.md) — manifest-mode path vs README, junction fix, MSBuild -p: in git-bash, missing runtime DLLs
+- [커밋 Co-Authored-By 금지](feedback_no_coauthored.md) — git 커밋 메시지에 Co-Authored-By 줄 넣지 말 것
+- [CLAUDE.md 에이전트 미존재](project_missing_agent_types.md) — code-architecture-reviewer 등 미등록, general-purpose로 페르소나 위임 필요
+- [Phase5 로거 overflow 결정](project_phase5_logger_overflow_decision.md) — block 정책 실측 대응; watchdog_test로 CRASH 매크로 fail-fast 확인됨(2026-06-19)
+- [Claude Workspace 동기화 시스템](project_workspace_sync.md) — dev/+메모리를 claude-workspace 레포로 기기 간 sync; DhNet-dev 서브모듈 대체(2026-07-01)
