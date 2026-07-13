@@ -24,5 +24,9 @@ restore_dir "$SOURCE/claude"  "$REPO_ROOT/.claude"
 restore_dir "$SOURCE/dev"     "$REPO_ROOT/dev"
 restore_dir "$SOURCE/memory"  "$MEMORY_PATH"
 
-[ -f "$SOURCE/CLAUDE.md" ]             && cp "$SOURCE/CLAUDE.md"             "$REPO_ROOT/CLAUDE.md"
+{
+  [ -f "$WORKSPACE/CLAUDE.md" ] && cat "$WORKSPACE/CLAUDE.md" && echo ""
+  [ -f "$SOURCE/CLAUDE.md" ]    && cat "$SOURCE/CLAUDE.md"
+} > "$REPO_ROOT/CLAUDE.md"
+
 [ -f "$SOURCE/settings.local.json" ]   && cp "$SOURCE/settings.local.json"   "$REPO_ROOT/.claude/settings.local.json"
