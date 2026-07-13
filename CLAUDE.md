@@ -22,3 +22,14 @@
 
 `.claude/agents/`의 에이전트(`code-architecture-reviewer` 등)는 `subagent_type`으로 직접 등록되어 있지 않다.  
 Agent 호출 시 반드시 `subagent_type="general-purpose"`를 사용하고 프롬프트 안에 페르소나를 포함한다.
+
+## 구현 원칙
+
+코드를 작성할 때는 아래 원칙을 지킨다.
+
+- **YAGNI** — 나중에 필요할 것이라고 짐작해서 미리 코드를 작성하지 않는다. 지금 요구사항에만 응답한다.
+- **KISS** — 불필요하게 장황하고 복잡한 코드를 경계한다. 단순한 구현이 항상 우선이다.
+- **Rule of Three + AHA** — 같은 패턴이 3번 반복되기 전까지 추상화를 서두르지 않는다.
+- **Layered Architecture + DIP** — 레이어를 분리하고, 구체 구현이 아닌 추상(인터페이스)에 의존한다.
+- **SRP + Information Hiding** — 변경 이유가 같은 것끼리만 묶는다. 내부 구현은 외부에 노출하지 않는다.
+- **Intention-Revealing Names** — 코드 자체가 의도를 드러내게 한다. 이름만으로 설명되지 않는 경우에만 주석을 단다.
